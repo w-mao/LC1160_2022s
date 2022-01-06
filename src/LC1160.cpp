@@ -12,6 +12,7 @@
 #include "Elementary_Programming/AllTests.h"
 #include "Flow_Control/AllTests.h"
 #include "Functions/AllTests.h"
+#include "Arrays_and_C-Strings/AllTests.h"
 using namespace std;
 
 int main()
@@ -76,6 +77,19 @@ int main()
 	//variableScopeDemo();
 	//staticVariableDemo();
 	//testPassByValueOrRreference();
+
+	/*
+	*	Arrays_and_C-Strings
+	*/
+	//analyzeNumbers();
+	//effectOfPassArrayDemo();
+	//reverseArray();
+	//testBinarySearch();
+	testVariousSortingMethods();
+
+	//testStrlenAndSizeof();
+	//passTwoDimensionalArray();
+
 
 	return 0;
 }
