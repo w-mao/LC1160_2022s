@@ -39,7 +39,9 @@ int testVoidFunction()
 	cin >> score;
 
 	cout << "The grade is: ";
+	//exit(1); // Kills the entire program
 	printGrade(score);
+
 
 	cout << endl <<"return instead of exit() is used!"<< endl;
 

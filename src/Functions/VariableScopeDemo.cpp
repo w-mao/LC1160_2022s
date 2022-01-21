@@ -20,7 +20,7 @@ int variableScopeDemo()
 	return 0;
 }
 
-int y; // Global variable, default to 0
+int y = 0; // Global variable, default to 0
 
 void t1()
 {
@@ -38,3 +38,9 @@ void t2()
 	cout << "y is " << y << endl;
 }
 
+int t1t2()
+{
+	t1();
+	t2();
+	return 0;
+}

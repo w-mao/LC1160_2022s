@@ -1,0 +1,5 @@
+
+1. Mac C++/eclipse cannot debug: Error while launching command: gdb --version
+
+Install gdb for mac. 
+brew install gdb

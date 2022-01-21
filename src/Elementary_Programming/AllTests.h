@@ -16,6 +16,7 @@ int limitsDemo();
 int sizeDemo();
 
 int displayTime();
+int testFolder();
 
 
 

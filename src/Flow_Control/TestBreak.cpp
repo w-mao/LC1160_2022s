@@ -11,7 +11,7 @@ using namespace std;
 
 int testBreak()
 {
-	cout << "Testing continue ... " << endl;
+	cout << "Testing break ... " << endl;
 
 	int sum = 0;
 	int number = 0;

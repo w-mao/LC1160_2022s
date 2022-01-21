@@ -16,13 +16,13 @@ void bubbleSort(double list[], int listSize)
 {
 	int tmp;
 
-	for(int i = 0; i<listSize; i++) {
-		for(int j = i+1; j<5; j++)
+	for(int i = 0; i < listSize - 1; i++) {
+		for(int j = 0; j < listSize - i - 1; j++)
 		{
-			if(list[j] < list[i]) {
-				tmp = list[i];
-				list[i] = list[j];
-				list[j] = tmp;
+			if(list[j] > list[j+1]) {
+				tmp = list[j];
+				list[j] = list[j+1];
+				list[j+1] = tmp;
 			}
 		}
 	}
@@ -123,6 +123,68 @@ void quickSort(double list[], int low, int high)
 }
 
 /*
+ * Merge sort algorithm
+ */
+
+void merge(double list[], int left, int mid, int right)
+{
+	int subListOne = mid - left + 1;
+	int subListTwo = right - mid;
+
+	// Create temporary arrays using pointers
+	double *leftList = new double[subListOne];
+	double *rightList = new double[subListTwo];
+
+	// Copy data to temporary arrays leftList[] and rightList[]
+	for (int i = 0; i < subListOne; i++)
+		leftList[i] = list[left + i];
+	for (int j = 0; j < subListTwo; j++)
+		rightList[j] = list[mid + 1 + j];
+
+	int indexOfSubListOne = 0; // Initial index of first sub list
+	int indexOfSubListTwo = 0; // Initial index of second sub list
+	int indexOfMergedList = left; // Initial index of merged list
+
+	// Merge the temporary lists back into list[left..right]
+	while (indexOfSubListOne < subListOne && indexOfSubListTwo < subListTwo) {
+		if (leftList[indexOfSubListOne] <= rightList[indexOfSubListTwo]) {
+			list[indexOfMergedList] = leftList[indexOfSubListOne];
+			indexOfSubListOne++;
+		}
+		else {
+			list[indexOfMergedList] = rightList[indexOfSubListTwo];
+			indexOfSubListTwo++;
+		}
+		indexOfMergedList++;
+	}
+	// Copy the remaining elements of left[], if there are any
+	while (indexOfSubListOne < subListOne) {
+		list[indexOfMergedList] = leftList[indexOfSubListOne];
+		indexOfSubListOne++;
+		indexOfMergedList++;
+	}
+	// Copy the remaining elements of right[], if there are any
+	while (indexOfSubListTwo < subListTwo) {
+		list[indexOfMergedList] = rightList[indexOfSubListTwo];
+		indexOfSubListTwo++;
+		indexOfMergedList++;
+	}
+}
+
+
+void mergeSort(double list[], int begin, int end)
+{
+	if (begin >= end)
+		return; // Returns recursively
+
+	int mid = begin + (end - begin) / 2;
+	mergeSort(list, begin, mid);
+	mergeSort(list, mid + 1, end);
+	merge(list, begin, mid, end);
+}
+
+
+/*
  * Test
  */
 int testVariousSortingMethods()
@@ -136,11 +198,11 @@ int testVariousSortingMethods()
 	cout<<endl;
 
 	// sizeof(a[0]) returns the data type size (of the first element).
-	//bubbleSort(a, sizeof(a)/sizeof(a[0]));
+	bubbleSort(a, sizeof(a)/sizeof(a[0]));
 	//selectionSort(a, sizeof(a)/sizeof(a[0]));
 	//insertionSort(a, sizeof(a)/sizeof(a[0]));
-	quickSort(a, 0, sizeof(a)/sizeof(a[0])-1); // high = sizeof(a)/sizeof(a[0])-1, postion of the last element
-
+	//quickSort(a, 0, sizeof(a)/sizeof(a[0])-1); // high = sizeof(a)/sizeof(a[0])-1, postion of the last element
+	//mergeSort(a, 0, sizeof(a)/sizeof(a[0])-1);
 	cout <<"Sorted Element List ...\n";
 	for(int i = 0; i<5; i++) {
 		cout <<a[i]<<"\t";

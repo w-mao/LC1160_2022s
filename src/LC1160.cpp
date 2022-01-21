@@ -8,6 +8,8 @@
 //============================================================================
 
 #include <iostream>
+#include "Assignments/AllTests.h"
+#include "Labs/AllTests.h"
 #include "Introduction/AllTests.h"
 #include "Elementary_Programming/AllTests.h"
 #include "Flow_Control/AllTests.h"
@@ -20,21 +22,22 @@ int main()
 
 	// Display Welcome to CPSC_1160! to the console
 	cout << "Welcome to CPSC_1160!" << endl;
-
+	//testFolder();
+	//eqexp();
 
 	/*
-	*	Introduction to C++
-	*/
+	 *	Introduction to C++
+	 */
 
 	//welcomeWithThreeMessages();
-	//computeExpression();
-	//ShowSyntaxErrors();
-	//showRuntimeErrors();
-	//showLogicErrors();
+	 //computeExpression();
+	//	ShowSyntaxErrors();
+	//	showRuntimeErrors();
+	//	showLogicErrors();
 
 	/*
-	*	Elementary Programming
-	*/
+	 *	Elementary Programming
+	 */
 	//computeAreaWithConsoleInput();
 	//computeAverage();
 	//computeAreaWithConstant();
@@ -46,8 +49,8 @@ int main()
 
 
 	/*
-	*	Flow_Control
-	*/
+	 *	Flow_Control
+	 */
 	// Selection
 	//computeTax();
 	//computeBCTax();
@@ -66,8 +69,8 @@ int main()
 
 
 	/*
-	*	Functions
-	*/
+	 *	Functions
+	 */
 	//displayATriangleOfAsterisks();
 	//testMax();
 	//testVoidFunction();
@@ -78,18 +81,38 @@ int main()
 	//staticVariableDemo();
 	//testPassByValueOrRreference();
 
+	//testCharacters();
+	//t1t2();
+
 	/*
-	*	Arrays_and_C-Strings
-	*/
+	 *	Arrays_and_C-Strings
+	 */
 	//analyzeNumbers();
-	//effectOfPassArrayDemo();
+	effectOfPassArrayDemo();
 	//reverseArray();
 	//testBinarySearch();
-	testVariousSortingMethods();
+	//testVariousSortingMethods();
 
 	//testStrlenAndSizeof();
 	//passTwoDimensionalArray();
 
+
+	/*
+	 * Assignments
+	 */
+	// Assign 0
+	//eqexp();
+	//eqexpAns();
+
+	//Assign 1
+	//vigenereCipher();
+	//vigenereCipherAns();
+
+	/*
+	 * Labs
+	 */
+	//monteCarloSimulation();
+	//playGamesOfGraps(8);
 
 	return 0;
 }

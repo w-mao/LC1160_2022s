@@ -18,5 +18,8 @@ int variableScopeDemo();
 int staticVariableDemo();
 int testPassByValueOrRreference();
 
+int testCharacters();
+int t1t2();
+
 
 #endif /* FUNCTIONS_ALLTESTS_H_ */
