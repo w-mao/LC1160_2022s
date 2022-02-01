@@ -9,6 +9,8 @@
 #include<iostream>
 using namespace std;
 
+int SIZE = 0;
+
 /*
  * Bubble Sort
  */
@@ -72,6 +74,11 @@ void insertionSort(double list[], int listSize) {
 			j--;
 		}
 		list[j] = key;   //insert in right place
+
+//		for(int ii = 0; ii < SIZE; ii++) {
+//			cout <<list[ii]<<"\t";
+//		}
+//		cout << endl;
 	}
 }
 
@@ -116,6 +123,7 @@ void quickSort(double list[], int low, int high)
 	{
 		//partition the array
 		int pivot = quickSortPartition(list, low, high);
+
 		//sort the sub arrays independently
 		quickSort(list, low, pivot - 1);
 		quickSort(list, pivot + 1, high);
@@ -190,21 +198,23 @@ void mergeSort(double list[], int begin, int end)
 int testVariousSortingMethods()
 {
 
-	double a[5] = {5.0, 4.0, 3.0, 2.0, 1.0};
+	//double a[] = {5.0, 4.0, 3.0, 2.0, 1.0};
+	double a[] = {6.0, 10.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0, 9.0, 0.0, 5.0};
+
 	cout <<"Input list ...\n";
-	for(int i = 0; i<5; i++) {
+	for(int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {
 		cout <<a[i]<<"\t";
 	}
 	cout<<endl;
-
+	SIZE = sizeof(a)/sizeof(a[0]);
 	// sizeof(a[0]) returns the data type size (of the first element).
-	bubbleSort(a, sizeof(a)/sizeof(a[0]));
+	//bubbleSort(a, sizeof(a)/sizeof(a[0]));
 	//selectionSort(a, sizeof(a)/sizeof(a[0]));
-	//insertionSort(a, sizeof(a)/sizeof(a[0]));
+	insertionSort(a, sizeof(a)/sizeof(a[0]));
 	//quickSort(a, 0, sizeof(a)/sizeof(a[0])-1); // high = sizeof(a)/sizeof(a[0])-1, postion of the last element
 	//mergeSort(a, 0, sizeof(a)/sizeof(a[0])-1);
 	cout <<"Sorted Element List ...\n";
-	for(int i = 0; i<5; i++) {
+	for(int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {
 		cout <<a[i]<<"\t";
 	}
 	return 0;

@@ -9,6 +9,29 @@
 #include <iostream>
 using namespace std;
 
+int testTwoForLoopsNew()
+{
+	int sum = 0;
+	cout << "Testing for (int i = 0; i < 10; ) sum += ++i; " << endl;
+	for (int i = 0; i < 10; )
+	{
+		sum += ++i;
+	}
+	cout << "The sum is: " << sum << endl;
+
+	sum = 0; // sum is set to 0 again
+	cout << "Testing for (int i = 0; i < 10; ) sum = i++;" << endl;
+	for (int i = 0; i < 10; )
+	{
+		sum += i++;
+	}
+	cout << "The sum is: " << sum << endl;
+
+
+	return 0;
+}
+
+
 int testTwoForLoops()
 {
 	int sum = 0;
@@ -27,7 +50,7 @@ int testTwoForLoops()
 	}
 	cout << "The sum is: " << sum << endl;
 
-
+	testTwoForLoopsNew();
 	return 0;
 }
 

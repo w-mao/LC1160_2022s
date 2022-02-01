@@ -16,6 +16,7 @@ int testVariousSortingMethods();
 
 int testStrlenAndSizeof();
 int passTwoDimensionalArray();
+int testStrings();
 
 
 

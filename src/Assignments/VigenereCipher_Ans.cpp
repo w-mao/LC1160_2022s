@@ -1,6 +1,8 @@
 // Assignment #1, CPSC 1160
 // Describe what the code is doing in your own words.
 // by #your name here#
+// string text;
+// text.length() will return the length of text.
 // 3 points for comments
 
 #include <iostream>
@@ -86,6 +88,7 @@ int vigenereCipherAns()
 
 	/*
 	 * Change code here based on tests, 1 point
+	 * filePath should be correct
 	 */
 
 	getKeyAns(key);

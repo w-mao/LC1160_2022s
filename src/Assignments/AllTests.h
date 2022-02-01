@@ -13,5 +13,8 @@ int eqexp();
 int eqexpAns();
 int vigenereCipher();
 int vigenereCipherAns();
+int sequencesUsingRecursion();
+int sequencesUsingRecursionAns();
+
 
 #endif /* ASSIGNMENTS_ALLTESTS_H_ */

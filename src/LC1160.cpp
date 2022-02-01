@@ -15,6 +15,8 @@
 #include "Flow_Control/AllTests.h"
 #include "Functions/AllTests.h"
 #include "Arrays_and_C-Strings/AllTests.h"
+#include "Objects_and_Classes/AllTests.h"
+#include "Pointers_and_DMM/AllTests.h"
 using namespace std;
 
 int main()
@@ -22,8 +24,9 @@ int main()
 
 	// Display Welcome to CPSC_1160! to the console
 	cout << "Welcome to CPSC_1160!" << endl;
+
+
 	//testFolder();
-	//eqexp();
 
 	/*
 	 *	Introduction to C++
@@ -88,13 +91,39 @@ int main()
 	 *	Arrays_and_C-Strings
 	 */
 	//analyzeNumbers();
-	effectOfPassArrayDemo();
+	//effectOfPassArrayDemo();
 	//reverseArray();
 	//testBinarySearch();
 	//testVariousSortingMethods();
 
 	//testStrlenAndSizeof();
 	//passTwoDimensionalArray();
+	//testStrings();
+
+	/*
+	 *	Objects_and_Classes
+	 */
+	//testCircle();
+	//testTV();
+	//testClassAssignmentOperator();
+	//testCircleWithHeader();
+	//testCircleWithPrivateDataFields();
+
+	//testLoanClass();
+	//testStringClass ();
+	//testArrayOfObejctsTotalArea();
+	//testCircleWithStaticDataFields();
+
+
+	/*
+	 *	Pointers and Dynamic Memory Management
+	 */
+
+	//testPointer();
+	//testArrayPointer();
+	//testPointerArgument();
+	//reverseArrayUsingPointer();
+	//testUsefulArrayFunctions();
 
 
 	/*
@@ -107,12 +136,16 @@ int main()
 	//Assign 1
 	//vigenereCipher();
 	//vigenereCipherAns();
+	//sequencesUsingRecursion();
+	//sequencesUsingRecursionAns();
 
 	/*
 	 * Labs
 	 */
 	//monteCarloSimulation();
 	//playGamesOfGraps(8);
+	//testQuickSort();
+	testRecursion();
 
 	return 0;
 }
