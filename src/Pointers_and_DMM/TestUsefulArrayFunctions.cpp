@@ -7,7 +7,7 @@
 
 
 #include <iostream>
-//#include <algorithm>
+#include <algorithm>
 using namespace std;
 
 void printArrayElements(const int* list, int size)

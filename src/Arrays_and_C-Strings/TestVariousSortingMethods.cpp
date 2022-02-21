@@ -75,10 +75,10 @@ void insertionSort(double list[], int listSize) {
 		}
 		list[j] = key;   //insert in right place
 
-//		for(int ii = 0; ii < SIZE; ii++) {
-//			cout <<list[ii]<<"\t";
-//		}
-//		cout << endl;
+		for(int ii = 0; ii < SIZE; ii++) {
+			cout <<list[ii]<<"\t";
+		}
+		cout << endl;
 	}
 }
 
@@ -199,7 +199,8 @@ int testVariousSortingMethods()
 {
 
 	//double a[] = {5.0, 4.0, 3.0, 2.0, 1.0};
-	double a[] = {6.0, 10.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0, 9.0, 0.0, 5.0};
+	//double a[] = {6.0, 10.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0, 9.0, 0.0, 5.0};
+	double a[] = {6.0, 0.0, 2.0, 1.0, 7.0, 8.0, 3.0, 5.0};
 
 	cout <<"Input list ...\n";
 	for(int i = 0; i < sizeof(a)/sizeof(a[0]); i++) {

@@ -17,6 +17,9 @@
 #include "Arrays_and_C-Strings/AllTests.h"
 #include "Objects_and_Classes/AllTests.h"
 #include "Pointers_and_DMM/AllTests.h"
+#include "Templates_and_Vectors/AllTests.h"
+#include "Inheritance_and_Polymorphism/AllTests.h"
+#include "Files_and_Exception_Handling/AllTests.h"
 using namespace std;
 
 int main()
@@ -125,6 +128,42 @@ int main()
 	//reverseArrayUsingPointer();
 	//testUsefulArrayFunctions();
 
+	/*
+	 * Templates and Vectors
+	 */
+	//testMaxValue();
+	//testGenericSort();
+	//testGenericStackWithTemplateFunction();
+	//testVector();
+	//testTwoDArrayUsingVector();
+
+	/*
+	 * Inheritance and Polymorphism
+	 */
+
+	//testGeometricObject();
+	//testVisibility();
+	//constructorDestructorCallDemo();
+	//polymorphismDemo();
+	//virtualFunctionDemo();
+	//testPolymorphism();
+
+	/*
+	 * Files and Exception Handling
+	 */
+	//textFileOutput();
+	//textFileInput();
+	//testEndOfFile();
+	//checkFile();
+	//writeFormattedData();
+	//readCity();
+	//copyFile();
+	//appendFile();
+	//showStreamState();
+	//testQuotientWithException(); // Quotient with exception
+	testQuotientWithFunction(); // Quotient with exception from function
+	testQuotientThrowRuntimeError();
+	testBadAllocExceptionDemo();
 
 	/*
 	 * Assignments
@@ -145,7 +184,7 @@ int main()
 	//monteCarloSimulation();
 	//playGamesOfGraps(8);
 	//testQuickSort();
-	testRecursion();
+	//testRecursion();
 
 	return 0;
 }
