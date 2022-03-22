@@ -12,6 +12,7 @@ int monteCarloSimulation();
 int playGamesOfGraps (int);
 int testQuickSort();
 int testRecursion();
+int linkedListFun();
 
 
 #endif /* LABS_ALLTESTS_H_ */

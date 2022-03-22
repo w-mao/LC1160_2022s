@@ -15,6 +15,8 @@ int vigenereCipher();
 int vigenereCipherAns();
 int sequencesUsingRecursion();
 int sequencesUsingRecursionAns();
+int testGenDLList();
+int testGenSLList();
 
 
 #endif /* ASSIGNMENTS_ALLTESTS_H_ */
