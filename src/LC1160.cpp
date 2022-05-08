@@ -15,15 +15,74 @@
 #include "Flow_Control/AllTests.h"
 #include "Functions/AllTests.h"
 #include "Arrays_and_C-Strings/AllTests.h"
-#include "Objects_and_Classes/AllTests.h"
 #include "Pointers_and_DMM/AllTests.h"
 #include "Templates_and_Vectors/AllTests.h"
 #include "Inheritance_and_Polymorphism/AllTests.h"
 #include "Files_and_Exception_Handling/AllTests.h"
+#include "Stacks_and_Queues/AllTests.h"
 using namespace std;
 
-int main()
-{
+
+void Q1(int a[], int x){
+    if(x > 0){
+        x = x -1;
+        Q1(a,x);
+        std::cout << a[x] << " ";
+    }
+
+}
+
+bool Q2( int A[],int n ) {
+   if ( n == 0 )
+      return true;
+   return( A[n - 1]%2 == 0 && Q2 ( A,n - 1) );
+ }
+
+void Q3(){
+    int * q = new int(3);
+    int * p = q;
+    int a = 6;
+    q = &a;
+    *p = 7;
+    a =4;
+    std::cout << a << *q << *p;
+}
+struct Node{
+    int data;
+    Node* next;
+    Node(int d = 0, Node* n = nullptr){
+    	data = d;
+    	next = n;
+    }
+
+};
+Node* Q4(Node * p){
+    Node* h = p;
+    while(p != nullptr){
+        Node* tmp = p->next;
+        if(tmp != nullptr){
+            p->next = tmp->next;
+            delete tmp;
+        }
+        p = p->next;
+    }
+    return h;
+}
+
+
+int main(){
+    int arr[] = {1,2,3,4};
+    Q1(arr,4);
+    std::cout << std::endl;
+    int arr2[] = {6,2,8,4,1};
+    std::cout << Q2(arr2,5) << std::endl;
+    Q3();
+    std::cout << std::endl;
+    Node* p = new Node{1,new Node{2,new Node{3,new Node{4,new Node{5,new Node{6,new Node{7,new Node{8,nullptr}}}}}}}};
+    p = Q4(p);
+    for(Node* q = p; q; q=q->next){
+        std::cout << q->data << " ";
+    }
 
 	// Display Welcome to CPSC_1160! to the console
 	cout << "Welcome to CPSC_1160!" << endl;
@@ -161,9 +220,21 @@ int main()
 	//appendFile();
 	//showStreamState();
 	//testQuotientWithException(); // Quotient with exception
-	testQuotientWithFunction(); // Quotient with exception from function
-	testQuotientThrowRuntimeError();
-	testBadAllocExceptionDemo();
+	//testQuotientWithFunction(); // Quotient with exception from function
+	//testQuotientThrowRuntimeError();
+	//testBadAllocExceptionDemo();
+
+
+	/*
+	 * Stacks_and_Queues
+	 */
+	testArrayStack();
+	//testSinglyLinkedStack();
+	//testVectorStack();
+	//testListStack();
+
+	//testArrayQueue();
+	//testListQueue();
 
 	/*
 	 * Assignments
@@ -177,6 +248,9 @@ int main()
 	//vigenereCipherAns();
 	//sequencesUsingRecursion();
 	//sequencesUsingRecursionAns();
+	//testGenDLList();
+	testGenSLList();
+	//linkedListFun();
 
 	/*
 	 * Labs
